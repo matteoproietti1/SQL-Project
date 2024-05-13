@@ -5,7 +5,7 @@ layoffs_clean$date <- as.Date(layoffs_clean$date)
 layoffs_filtered <- layoffs_clean %>%
   filter(year(date) >= 2020 & year(date) <= 2023)
 
-# Convert 'total_laid_off' to numeric (if it's not already)
+# Convert 'total_laid_off' to numeric (if it may be in text/str format)
 layoffs_filtered$total_laid_off <- as.numeric(layoffs_filtered$total_laid_off)
 
 # Aggregate total layoffs by year
