@@ -30,7 +30,7 @@ EDA involved exploring the data to answer the following key questions:
 The Analysis results are summarized as follows:
 1. The United States had the highest number of job losses by a significant margin.
 2. Focusing on the total layoffs, there was a substantial increase in 2021???, followed by a decrease in 2022???. However, the layoffs quickly started rising again, reaching nearly double the magnitude of the initial shock.
-![Trends](https://github.com/matteoproietti1/Workforce_Reduction_Analysis/assets/169601063/73a077d8-49b5-4412-9381-263627e0466f)
+![Trends](https://github.com/matteoproietti1/Workforce_Reduction_Analysis/assets/169601063/9e2b7f8b-e523-446f-bbe2-6cde87ed4972)
 3. Given the nature of their operations, the common industry type among the top 5 companies is technology and telecommunications.
 4. Considering Consumer and Retail as the most affected industries, we can possibly identify a trend related to the post-pandemic aftermath.
 
