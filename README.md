@@ -29,8 +29,8 @@ EDA involved exploring the data to answer the following key questions:
 The Analysis results are summarized as follows:
 1. The United States had the highest number of job losses by a significant margin.
 2. Focusing on the total layoffs, there was a substantial increase in 2020, followed by a decrease in 2021. However, the layoffs quickly started rising again, reaching nearly double the magnitude of the initial shock.
-4. Given the nature of their operations, the common industry type among the top 5 companies is technology and telecommunications.
-5. Considering Consumer and Retail as the most affected industries, we can possibly identify a trend related to the post-pandemic aftermath.
+3. Given the nature of their operations, the common industry type among the top 5 companies is technology and telecommunications.
+4. Considering Consumer and Retail as the most affected industries, we can possibly identify a trend related to the post-pandemic aftermath.
 
 ### Limitations
 There were zero and null values that have not been included because they may have negatively affected the analysis. However, the biggest limitation is that it only considers the available data up to the first quarter of 2023
