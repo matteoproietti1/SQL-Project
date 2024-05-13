@@ -29,13 +29,13 @@ EDA involved exploring the data to answer the following key questions:
 ### Results/Findings
 The Analysis results are summarized as follows:
 1. The United States had the highest number of job losses by a significant margin.
-2. Focusing on the total layoffs, there was a substantial increase in 2021???, followed by a decrease in 2022???. However, the layoffs quickly started rising again, reaching nearly double the magnitude of the initial shock.
-![Trends](https://github.com/matteoproietti1/Workforce_Reduction_Analysis/assets/169601063/128130e1-1772-4a26-bc60-ee8bfc339794)
+2. Focusing on the total layoffs by year, there was a substantial increase during 2021, followed by a small decrease in 2022. However, the layoffs quickly started rising again, reaching in only 3 months almost the magnitude of the initial shock (which suggest that, by the end of the year, that would be at least twice the amount of 2022 laidoff total).
+![TrendsColumn](https://github.com/matteoproietti1/Workforce_Reduction_Analysis/assets/169601063/f4500829-29af-4870-98f7-e14cb2acf1c7)
 3. Given the nature of their operations, the common industry type among the top 5 companies is technology and telecommunications.
 4. Considering Consumer and Retail as the most affected industries, we can possibly identify a trend related to the post-pandemic aftermath.
 
-### Visualization
-
+### Details and consideration about Visualization process
+For quick charts that required finding the Trend, it was used R.
 
 ### Limitations
 There were zero and null values that have not been included because they may have negatively affected the analysis. However, the biggest limitation is that it only considers the available data up to the first quarter of 2023
