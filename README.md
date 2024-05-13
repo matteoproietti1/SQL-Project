@@ -29,7 +29,7 @@ EDA involved exploring the data to answer the following key questions:
 ### Results/Findings
 The Analysis results are summarized as follows:
 1. The United States had the highest number of job losses by a significant margin.
-2. Focusing on the total layoffs by year, there was a substantial increase during 2021, followed by a small decrease in 2022. However, the layoffs quickly started rising again, reaching in only 3 months almost the magnitude of the initial shock (which suggest that, by the end of the year, that would be at least twice the amount of 2022 laidoff total).
+2. Focusing on the total layoffs by year, there was a significant number of layoffs during 2020 (right during COVID-19), followed by a noticeable decrease in 2021. However, the layoffs quickly started rising again in 2022 reaching its peak. Then, in 2023, in only 3 months has reached almost the magnitude of the initial shock (which suggest that, by the end of the year, that would be at least twice the amount of 2022 laidoff total).
 
 <img src="https://github.com/matteoproietti1/Workforce_Reduction_Analysis/assets/169601063/b273d94f-531b-4d57-92ea-0bc5b7ad87a9" alt="TrendsColumn" align="center">
 
