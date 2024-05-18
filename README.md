@@ -5,7 +5,7 @@
 This project conducts an in-depth analysis of global company layoffs data, spanning from 2020 to the first quarter of 2023. With >2000 rows of raw data initially, the dataset went under rigorous cleaning and manipulation using MySQL to ensure data accuracy, standardization and consistency. The analysis focused on identifying trends over the years, including frequency and distribution of layoffs across industries, countries, and companies. To provide comprehensive insights, a visualization was created using R/Posit Cloud, offering a visual-guided exploration of the analyzed data. 
 
 ### Data Sources
-Layoffs data: the primary dataset used for the analysis is the "layoffs.csv" file, containing raw information about layoffs throughout the years.The cleaned dataset, SQL scripts and .rmd for data processing and analysis are available in this repository for further exploration and utilization.
+Layoffs data: the primary dataset used for the analysis is the "layoffs.csv" file, containing raw information about layoffs throughout the years.The cleaned dataset, SQL scripts and .rmd for data processing and analysis are available in this repository for further exploration and utilization. Values where 'total_laid_off' and 'percentage_laid_off' were NULL or missing have been removed due to missing data.
 
 ### Tools
 - MySQL Workbench - Data Cleaning
