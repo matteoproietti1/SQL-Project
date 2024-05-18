@@ -3,26 +3,25 @@
 SELECT *
 FROM layoffs;
 
--- Top 10 with the highest total laid off
+-- Finding the top 10 companies with the highest total laid off
 SELECT company, MAX(total_laid_off) AS total, MAX(percentage_laid_off) as percentage
 FROM layoffs
 GROUP BY company
 ORDER BY total DESC
 LIMIT 10;
 
-
 SELECT *
 FROM layoffs
 WHERE percentage_laid_off = 1
 ORDER BY total_laid_off DESC;
 
--- Who had the biggest sum of laid off?
+-- Who had the biggest amount of laid off?
 SELECT company, SUM(total_laid_off)
 FROM layoffs
 GROUP BY company
 ORDER BY 2 DESC;
 
--- Datespan may suggest us that we are referring to a post-covid layoffs trend 
+-- Highlighting the datespan may helps us finding that we are referring to a post-covid layoffs trend 
 SELECT MIN(`date`), MAX(`date`)
 FROM layoffs;
 
