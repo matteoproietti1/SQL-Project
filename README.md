@@ -2,10 +2,10 @@
 ### From Raw Data to clean Visualization
 
 #### Project Overview
-This project conducts an in-depth analysis of global company layoffs data spanning from 2020 to the first quarter of 2023. With >2000 rows of raw data initially, the dataset went under rigorous cleaning and manipulation using MySQL to ensure data accuracy, standardization and consistency. The analysis focused on identifying trends over the years, including frequency and distribution of layoffs across industries, countries, and companies. To provide comprehensive insights, a visualization was created using R/Posit Cloud, offering an interactive exploration of the analyzed data. The cleaned dataset and SQL scripts for data processing and analysis are available in this repository for further exploration and utilization.
+This project conducts an in-depth analysis of global company layoffs data, spanning from 2020 to the first quarter of 2023. With >2000 rows of raw data initially, the dataset went under rigorous cleaning and manipulation using MySQL to ensure data accuracy, standardization and consistency. The analysis focused on identifying trends over the years, including frequency and distribution of layoffs across industries, countries, and companies. To provide comprehensive insights, a visualization was created using R/Posit Cloud, offering a visual-guided exploration of the analyzed data. 
 
 ### Data Sources
-Layoffs data: the primary dataset used for the analysis is the "layoffs.csv" file, containing raw information about layoffs throughout the years.
+Layoffs data: the primary dataset used for the analysis is the "layoffs.csv" file, containing raw information about layoffs throughout the years.The cleaned dataset, SQL scripts and .rmd for data processing and analysis are available in this repository for further exploration and utilization.
 
 ### Tools
 - MySQL Workbench - Data Cleaning
@@ -41,7 +41,7 @@ The Analysis results are summarized as follows:
 For quick charts that required finding the Trend, it was used R.
 
 ### Limitations
-There were zero and null values that have not been included because they may have negatively affected the analysis. However, the biggest limitation is that it only considers the available data up to the first quarter of 2023
+There were zero and null values that have not been included because they may have negatively affected the analysis. 
 
 
 ### SQL Queries/Interest findings outside the analysis
