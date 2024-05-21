@@ -55,7 +55,9 @@ EDA involved exploring the data to answer the following key questions:
 </details>
 
 - Which industries are the most affected?
-
+<details>
+    <summary>Click to see</summary>
+    
 | Industry type   | Total laid off      |
 |-----------------|---------------------|
 | Consumer        | 45182               |
@@ -65,10 +67,13 @@ EDA involved exploring the data to answer the following key questions:
 | Finance         | 28344               |
 | Healthcare      | 25894               |
 
-  
+As we may tell, the "Consumer" and "Retail" industry might suggest us that we are referring to a post-covid layoffs trend.
+
+</details>
+
 - What's the trend during the years? Analyze whether there was a discernible up and down in the aftermath of COVID-19 Pandemic
 <details>
-<summary>Click to expand</summary>
+<summary>Click to see</summary>
     
 Focusing on the total layoffs by year, the amount was significant during 2020 (right during COVID-19), followed by a noticeable decrease in 2021. However, the layoffs quickly started rising again in 2022 reaching its peak. Then, in 2023, in only 3 months has reached almost the magnitude of the initial shock (which suggest that, by the end of the year, that would be at least twice the amount of 2022 laidoff total). 
     
