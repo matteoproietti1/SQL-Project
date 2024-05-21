@@ -22,19 +22,66 @@ In the initial data preparation phase, following tasks were performed:
 ### Exploratory Data Analysis (EDA)
 EDA involved exploring the data to answer the following key questions:
 - Which country had most people losing their job?
-- What's the trend during the years? 
+<details> 
+<summary>Click to see</summary>
+
+| Country        | Total laid off      |
+|----------------|---------------------|
+| United States  | 256420              |
+| India          | 35793               |
+| Netherlands    | 17220               |
+| Sweden         | 11264               |
+| Brazil         | 10391               |
+| Germany        | 8701                |
+
+
+
+</details>
+
+- Which company had the highest amount of total laid off?
+<details>
+<summary>Click to see</summary>
+    
+| Company     | Layoffs   | Percentage   |
+|-------------|-----------|--------------|
+| Google      | 12000     | 0.06%        |
+| Meta        | 11000     | 0.13%        |
+| Microsoft   | 10000     | 0.05%        |
+| Amazon      | 10000     | 0.03%        |
+| Ericsson    | 8500      | 0.08%        |
+| Salesforce  | 8000      | 0.10%        |
+
+    
+</details>
+
 - Which industries are the most affected?
-- Investigation whether there was a discernible trend in the aftermath of COVID-19 Pandemic
+
+| Industry type   | Total laid off      |
+|-----------------|---------------------|
+| Consumer        | 45182               |
+| Retail          | 43613               |
+| Other           | 36209               |
+| Transportation  | 33548               |
+| Finance         | 28344               |
+| Healthcare      | 25894               |
+
+  
+- What's the trend during the years? Analyze whether there was a discernible up and down in the aftermath of COVID-19 Pandemic
+<details>
+<summary>Click to expand</summary>
+    
+Focusing on the total layoffs by year, the amount was significant during 2020 (right during COVID-19), followed by a noticeable decrease in 2021. However, the layoffs quickly started rising again in 2022 reaching its peak. Then, in 2023, in only 3 months has reached almost the magnitude of the initial shock (which suggest that, by the end of the year, that would be at least twice the amount of 2022 laidoff total). 
+    
+<img src="https://github.com/matteoproietti1/Workforce_Reduction_Analysis/assets/169601063/b273d94f-531b-4d57-92ea-0bc5b7ad87a9" alt="TrendsColumn" align="center">
+    
+</details>
 
 ### Results/Findings
+
 The Analysis results are summarized as follows:
 1. The United States had the highest number of job losses by a significant margin.
-2. Focusing on the total layoffs by year, the amount was significant during 2020 (right during COVID-19), followed by a noticeable decrease in 2021. However, the layoffs quickly started rising again in 2022 reaching its peak. Then, in 2023, in only 3 months has reached almost the magnitude of the initial shock (which suggest that, by the end of the year, that would be at least twice the amount of 2022 laidoff total).
-
-<img src="https://github.com/matteoproietti1/Workforce_Reduction_Analysis/assets/169601063/b273d94f-531b-4d57-92ea-0bc5b7ad87a9" alt="TrendsColumn" align="center">
-
-3. Given the nature of their operations, the common industry type among the top 5 companies is technology and telecommunications.
-4. Considering Consumer and Retail as the most affected industries, we can possibly identify a trend related to the post-pandemic aftermath.
+2. Given the nature of their operations, the common industry type among the top 5 companies is technology and telecommunications.
+3. Considering Consumer and Retail as the most affected industries, we can possibly identify a trend related to the post-pandemic aftermath.
 
 
 ### Details and consideration about Visualization process
@@ -45,50 +92,6 @@ There were zero and null values that have not been included because they may hav
 
 
 ### SQL Queries/Interest findings outside the analysis
-What are the top 5 company, each year, that laid off the most employee?
-```sql
-WITH company_year (company, years, total_laid_off) AS
-(
-SELECT company, YEAR(`date`), SUM(total_laid_off)
-FROM layoffs
-GROUP BY company, YEAR(`date`)
-), company_year_rank AS (
-SELECT *, DENSE_RANK() OVER (PARTITION BY years ORDER BY total_laid_off DESC) AS ranking
-FROM company_year
-WHERE years IS NOT NULL
-)
-SELECT * 
-FROM company_year_rank
-WHERE ranking <= 5;
-```
-Company that did more than 1 layoff throughout the years
-```sql
-SELECT company, YEAR(`date`), SUM(total_laid_off)
-FROM layoffs
-GROUP BY company, YEAR(`date`)
-ORDER BY 1 ASC
+For more interesting findings not directly related to this analysis, please refer to "findings_layoffs.sql".
 
-SELECT company, YEAR(`date`), SUM(total_laid_off)
-FROM layoffs
-WHERE company IN (
-    SELECT company
-    FROM layoffs
-    GROUP BY company
-    HAVING COUNT(*) > 1
-)
-GROUP BY company, YEAR(`date`)
-ORDER BY company ASC, YEAR(`date`) ASC;
-```
-Rolling total by month through the years
-```sql
-WITH rolling_total AS 
-(SELECT SUBSTRING(`date`,1,7) AS `month`, SUM(total_laid_off) AS total
-FROM layoffs
-WHERE SUBSTRING(`date`,1,7) IS NOT NULL
-GROUP BY `month`
-ORDER BY 1 ASC
-)
-SELECT `month`, total,
-SUM(total) OVER(ORDER BY `month`) AS rolling_total
-FROM rolling_total
-```
+Thank you for your time! :)
